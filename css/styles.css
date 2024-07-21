@@ -22,7 +22,7 @@ body {
   background-color: hsl(244, 38%, 16%);
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
-  padding: 50px;
+  padding: 30px;
 }
 
 .heading {
@@ -35,7 +35,7 @@ body {
 
 .description {
   width: 350px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
   color: hsla(0, 0%, 100%, 0.75);
 }
 
@@ -63,6 +63,7 @@ body {
 .business-img {
   background: url(/images/image-header-desktop.jpg);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   z-index: 2;
   border-bottom-right-radius: 10px;
@@ -72,7 +73,7 @@ body {
 .overlay {
   background-color: hsla(277, 64%, 61%, 0.7);
   z-index: 80;
-  width: 470px;
+  width: 350px;
   height: 100%;
   z-index: 5;
   border-bottom-right-radius: 10px;
@@ -83,12 +84,141 @@ span {
   color: hsl(277, 64%, 61%);
 }
 
-
 .stat {
   font-size: 20px;
   color: hsl(0, 0%, 100%);
+  font-weight: 700;
 }
 
 .title {
   color: hsla(0, 0%, 100%, 0.75);
+}
+
+/* RESPONSIVENESS */
+
+@media screen and (max-width: 1000px) {
+  /* body {
+    background-color: green;
+  } */
+
+  .heading {
+    font-size: 30px;
+    width: 300px;
+  }
+
+  .description {
+    width: 350px;
+  }
+
+  .stat-container {
+    width: 100px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  /* body {
+    background-color: red;
+  } */
+
+  .heading {
+    font-size: 25px;
+    width: 300px;
+  }
+
+  .description {
+    width: 300px;
+  }
+
+  .stat-container {
+    width: 80px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* body {
+    background-color: pink;
+  } */
+
+  .preview-card {
+    padding: 10px;
+  }
+
+  .heading {
+    font-size: 25px;
+    width: 200px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    width: 200px;
+    margin-bottom: 30px;
+    font-size: 13px;
+  }
+
+  .business-stat {
+    width: 200px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .company {
+    font-size: 14px;
+  }
+
+  .overlay {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  /* body {
+    background-color: orange;
+  } */
+
+  .preview-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .business-info {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .heading {
+    width: 250px;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .description {
+    text-align: center;
+    width: 250px;
+    font-weight: 500;
+  }
+
+  .business-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .business-img {
+    background: url(/images/image-header-mobile.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .overlay {
+    width: 100%;
+    height: 200px;
+  }
 }
